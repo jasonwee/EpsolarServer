@@ -1,0 +1,21 @@
+#
+#
+#
+[Unit]
+Description=epsolar
+After=syslog.target network.target mysql.target
+
+[Service]
+Type=simple
+#Type=forking
+
+ExecStart=/home/ubuntu/EpsolarServer/EpsolarServer
+
+User=root
+Group=root
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
