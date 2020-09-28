@@ -47,6 +47,12 @@ epsolarPollFrequencyMS: How long the should server pause between reading registe
 ```
 
 To start the software when your system boots up, edit "epsolar.init" and copy it to "/etc/init.d/epsolar". Then run "update-rc.d epsolar defaults".
+or if you prefer systemd unit file,
+
+```
+# cp dist/epsolar.unit /etc/systemd/system/epsolar.service
+# service epsolar start
+```
 
 ## Running
 
