@@ -16,6 +16,17 @@ If you want to use libmodbus (probably Yes if on a raspberry pi):
 
 Credit to: zlib.js, graph.js, qhttpserver, and the listed software above.
 
+## Install driver for USB TO RS485 cable
+
+If you have a usb to rs485 cable as show in /img/usb-to-rs485.jpeg and you run ubuntu, you can build the driver
+as found in xr_usb_serial_common-1a directory. You must make sure the cable plugin and a character special
+file /dev/ttyXRUSB0 created before proceed of the following instruction.
+
+```
+ubuntu@ubuntu:~$ file /dev/ttyXRUSB0
+/dev/ttyXRUSB0: character special (266/0)
+```
+
 ## Building
 
 If you want to use the integrated web server, you must build and install "qhttpserver" located in "3rdparty/" first. You need the Qt dependencies mentioned above, but otherwise just "qmake", "make", and "make install" this.
